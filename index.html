@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📚Personal Book Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container" id="welcomeSection">
+        <h1>📚Welcome to Personal Book Library</h1>
+        <div class="input-group">
+            <input type="text" id="registerUsername" placeholder="Enter username" required>
+            <input type="email" id="registerEmail" placeholder="Enter email" required>
+            <input type="password" id="registerPassword" placeholder="Enter password" required>
+            <button onclick="register()">Register</button>
+        </div>
+        <div class="input-group">
+            <input type="text" id="loginUsername" placeholder="Enter username" required>
+            <input type="password" id="loginPassword" placeholder="Enter password" required>
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+    
+    <div class="container" id="librarySection" style="display:none;">
+        <div class="header">
+            <div class="user-icon" onclick="toggleUserDetails()">👤</div>
+            <div class="logout-button">
+                <button onclick="logout()">Logout</button>
+            </div>
+        </div>
+        <div id="userDetails" class="user-details" style="display: none;">
+            <p><strong>Username:</strong> <span id="displayUsername"></span></p>
+            <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+        </div>
+        <h1>📚 Personal Book Library</h1>
+        <div class="input-group">
+            <input type="text" id="bookTitle" placeholder="Enter book title" required>
+            <input type="text" id="bookCategory" placeholder="Enter book category" required>
+            <input type="text" id="bookLink" placeholder="Enter book link or PDF URL" required>
+            <button onclick="addBook()">Add Book</button>
+        </div>
+        <input type="text" id="search" placeholder="🔍 Search books..." onkeyup="searchBooks()">
+        <div class="book-list" id="bookList"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
