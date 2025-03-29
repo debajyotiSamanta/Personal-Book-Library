@@ -92,7 +92,7 @@ function displayBooks() {
         bookList.innerHTML += `
             <div class="book-item">
                 <span><strong>${book.title}</strong> (${book.category}) - Added by ${book.addedBy}</span>
-                <a href="${book.link}" target="_blank">📖 Read</a>
+                <a href="${book.link}" target="_blank">📖 Read  </a>
                 ${book.addedBy === loggedInUser ? `<button onclick="removeBook(${index})">❌ Remove</button>` : ''}
             </div>`;
     });
